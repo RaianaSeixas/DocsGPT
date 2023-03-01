@@ -11,13 +11,13 @@ from typing import List, Optional
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-from parser.file.bulk import SimpleDirectoryReader
-from parser.schema.base import Document
-from parser.open_ai_func import call_openai_api, get_user_permission
-from parser.py2doc import transform_to_docs
-from parser.py2doc import extract_functions_and_classes as extract_py
-from parser.js2doc import extract_functions_and_classes as extract_js
-from parser.java2doc import extract_functions_and_classes as extract_java
+from parsers.file.bulk import SimpleDirectoryReader
+from parsers.schema.base import Document
+from parsers.open_ai_func import call_openai_api, get_user_permission
+from parsers.py2doc import transform_to_docs
+from parsers.py2doc import extract_functions_and_classes as extract_py
+from parsers.js2doc import extract_functions_and_classes as extract_js
+from parsers.java2doc import extract_functions_and_classes as extract_java
 
 
 dotenv.load_dotenv()

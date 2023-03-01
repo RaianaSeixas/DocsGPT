@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DocsGPT 🦖 Preview</title>
+    <title>T10 - DocsGPT Preview</title>
     <link href="{{url_for('static',filename='dist/css/output.css')}}" rel="stylesheet">
       <link rel="favicon" href="{{ url_for('static', filename='favicon/favicon.ico') }}">
       <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
@@ -20,9 +20,9 @@
 
 
     <header class="bg-white p-2 flex justify-between items-center">
-      <h1 class="text-lg font-medium">DocsGPT 🦖 Preview</h1>
+      <h1 class="text-lg font-medium">T10 - DocsGPT Preview</h1>
         <div>
-      <a href="https://github.com/arc53/docsgpt" class="text-blue-500 hover:text-blue-800 text-sm">About</a>
+      <!-- <a href="https://github.com/arc53/docsgpt" class="text-blue-500 hover:text-blue-800 text-sm">About</a> -->
             {% if not api_key_set %}
       <button class="text-sm text-yellow-500 hover:text-yellow-800" onclick="resetApiKey()">Reset Key</button>
         {% endif %}
@@ -39,16 +39,16 @@
 </div>
 
 
-    <div class="lg:flex ml-2 mr-2">
-      <div class="lg:w-3/4 min-h-screen max-h-screen">
+    <div class="w-full flex ml-2 mr-2">
+      <div class="w-full min-h-screen max-h-screen">
         <div class="w-full flex flex-col h-5/6">
-          <div id="messages-container" style="overflow: auto;" class="sm:max-lg:mb-[12rem]">
+          <div id="messages-container" style="/* overflow: auto; */" class="sm:max-lg:mb-[12rem]">
 
             <div id="messages" class="w-full flex flex-col mt-2" >
               <div class="bg-indigo-500 text-white p-2 rounded-lg mb-2 self-start">
-                <p class="text-sm">Hello, ask me anything about this library. Im here to help</p>
+                <p class="text-sm">Olá, me pergunte qualquer coisa. Estou aqui para ajudar.</p>
               </div>
-              <div class="bg-blue-500 text-white p-2 rounded-lg mb-2 self-end">
+              <!-- <div class="bg-blue-500 text-white p-2 rounded-lg mb-2 self-end">
                 <p class="text-sm">How to merge tables?</p>
               </div>
               <div class="bg-indigo-500 text-white p-2 rounded-lg mb-2 self-start">
@@ -58,36 +58,36 @@ where left and right are the two tables to merge, on is the column to merge on, 
 For example, to merge the two tables df1 and df2 on the column 'key', you can use:<br>
 pd.merge(df1, df2, on='key', how='left')<br>
 This will return a new DataFrame with all the columns from both tables, and only the rows that match the 'key' column. </p>
-              </div>
+              </div> -->
 
           </div>
         </div>
 
-        <div class="fixed bottom-0 w-full mt-4 mb-2 lg:w-3/4">
+        <div class="fixed bottom-0 w-full mt-4 mb-2 lg:w-full">
         <form id="message-form" autocomplete="off" class="flex items-stretch">
-          <input autocomplete="off" id="message-input" class="bg-white p-2 rounded-lg ml-2 text-sm w-full" type="text" placeholder="Type your message here...">
-          <button id="button-submit" class="bg-blue-500 text-white p-2 rounded-lg ml-2 mr-2 text-sm sm:max-lg:p-5" type="submit">Send</button>
+          <input autocomplete="off" id="message-input" class="bg-white p-2 rounded-lg ml-2 text-sm w-full" type="text" placeholder="Digite sua mensagem aqui...">
+          <button id="button-submit" class="bg-blue-500 text-white p-2 rounded-lg ml-2 mr-2 text-sm sm:max-lg:p-5" type="submit">Enviar</button>
         </form>
         </div>
 
         
 
 
-    </div>
+    <!-- </div>
         </div>
-        <div class="lg:w-1/4 p-2 sm:max-lg:hidden">
-          <p class="text-sm">This is a chatbot that uses the GPT-3, Faiss and <a href="https://github.com/hwchase17/langchain" class="text-blue-500 hover:text-blue-800">LangChain</a> to answer questions</p>
-          <br>
-          <p class="text-sm">The source code is available on <a href="https://github.com/arc53/docsgpt" class="text-blue-500 hover:text-blue-800">Github</a></p><br>
+        <div class="lg:w-1/4 p-2 sm:max-lg:hidden"> -->
+          <!-- <p class="text-sm">This is a chatbot that uses the GPT-3, Faiss and <a href="https://github.com/hwchase17/langchain" class="text-blue-500 hover:text-blue-800">LangChain</a> to answer questions</p> -->
+          <!-- <br> -->
+          <!-- <p class="text-sm">The source code is available on <a href="https://github.com/arc53/docsgpt" class="text-blue-500 hover:text-blue-800">Github</a></p><br>
           <p class="text-sm">Currently It uses python pandas documentation, so it will respond to information relevant to pandas. If you want to train it on different documentation -  <a href="https://github.com/arc53/docsgpt/wiki/How-to-train-on-other-documentation" class="text-blue-500 hover:text-blue-800"> please follow this guide </a></p><br>
-          <p class="text-sm">If you want to launch it on your own server - <a href="https://github.com/arc53/docsgpt/wiki/How-to-train-on-other-documentation" class="text-blue-500 hover:text-blue-800"> follow this guide </a></p><br>
-            <label  class="block mb-2 text-sm font-medium text-gray-900">Select documentation from DocsHUB</label>
+          <p class="text-sm">If you want to launch it on your own server - <a href="https://github.com/arc53/docsgpt/wiki/How-to-train-on-other-documentation" class="text-blue-500 hover:text-blue-800"> follow this guide </a></p><br> -->
+            <!-- <label  class="block mb-2 text-sm font-medium text-gray-900">Select documentation from DocsHUB</label>
             <select id="select-docs" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
               <option selected value="default">Choose documentation</option>
               <option value="default">Default</option>
-            </select>
-        </div>
-    </div>
+            </select> -->
+        <!-- </div>
+    </div> -->
 
   <div class="flex items-center justify-center h-full">
     

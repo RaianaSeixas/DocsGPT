@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, Union, cast
 
-from parser.file.base_parser import BaseParser
+from parsers.file.base_parser import BaseParser
 
 
 class RstParser(BaseParser):

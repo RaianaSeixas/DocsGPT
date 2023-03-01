@@ -4,7 +4,7 @@ from typing import Any, List
 
 from langchain.docstore.document import Document as LCDocument
 
-from parser.schema.base import Document
+from parsers.schema.base import Document
 
 
 class BaseReader:

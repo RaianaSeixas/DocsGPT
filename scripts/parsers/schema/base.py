@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 from langchain.docstore.document import Document as LCDocument
 
-from parser.schema.schema import BaseDocument
+from parsers.schema.schema import BaseDocument
 
 
 @dataclass

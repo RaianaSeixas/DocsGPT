@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 from typing import Dict, Union
 
-from parser.file.base_parser import BaseParser
+from parsers.file.base_parser import BaseParser
 
 class HTMLParser(BaseParser):
     """HTML parser."""
